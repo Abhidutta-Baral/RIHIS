@@ -8,13 +8,13 @@ import lombok.Data;
 
 @Entity
 @Data
-public class IncomeDetails {
+public class EducationDetails {
 	@Id
 	@GeneratedValue
-	private Integer incomeId;
+	private Integer educationId;
 	private Long caseNo;
-	private Long monthlySalary;
-	private Long rentIncome;
-	private Long propertyIncome;
+	private String highestDegree;
+	private String graduationYear;
+	private String universityName;
 
 }

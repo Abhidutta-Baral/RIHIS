@@ -8,13 +8,12 @@ import lombok.Data;
 
 @Entity
 @Data
-public class IncomeDetails {
+public class KidsDetails {
 	@Id
 	@GeneratedValue
-	private Integer incomeId;
+	private Integer kidsId;
 	private Long caseNo;
-	private Long monthlySalary;
-	private Long rentIncome;
-	private Long propertyIncome;
-
+	private String kidName;
+	private String kidsAge;
+	private String kidsSsn;
 }

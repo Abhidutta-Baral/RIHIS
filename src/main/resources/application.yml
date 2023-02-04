@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: dc-api
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-1.csyg70uplour.ap-northeast-1.rds.amazonaws.com:3306/helthdomain
+    username: admin
+    password: Abhidutta
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+      
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 8081
